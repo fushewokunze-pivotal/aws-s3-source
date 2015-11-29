@@ -1,4 +1,4 @@
-RSS Feed Source Module
+AWS S3 Feed Source Module
 =============================
 
 This is an example of a custom source module using the Spring Integration feed inbound channel adapter to download files from a S3 bucket. This is built and packaged for installation in a Spring XD runtime environment using maven. The project includes sample unit and integration tests, including the ability to test the module in an embedded single node container. It also illustrates how to define module options using simple property descriptors.
@@ -53,20 +53,19 @@ You can also get information about the available module options:
 	Information about source module 'feed':
 
   	Option Name         Description                                                Default                                   Type
-  ------------------  ---------------------------------------------------------  ----------------------------------------  ---------------------------------
-  fixedRate           the fixed rate polling interval specified in milliseconds  5000                                      int
-  accessKey           the accessKey for AWS                                      AKIAJ7XQCW7P5FHBGYAQ                      java.lang.String
-  bucket              the bucket for S3                                          testboom                                  java.lang.String
-  remoteDirectory     the remoteDirectory for S3                                 /                                         java.lang.String
-  maxMessagesPerPoll  the maximum number of messages per poll                    100                                       int
-  secretKey           the secretKey for AWS                                      x3NKKW0LthjQK75jymP+InhZp9aP4hwqvMeaxgny  java.lang.String
-  localDirectory      the localDirectory                                         /tmp/nec                                  java.lang.String
-  outputType          how this module should emit messages it produces           <none>                                    org.springframework.util.MimeType
+  	------------------  ---------------------------------------------------------  -------  ---------
+    	fixedRate           the fixed rate polling interval specified in milliseconds  5000                                      int
+    	accessKey           the accessKey for AWS                                      AKIAJ7XQCW7P5FHBGYAQ                      java.lang.String
+    	bucket              the bucket for S3                                          testboom                                  java.lang.String
+    	remoteDirectory     the remoteDirectory for S3                                 /                                         java.lang.String
+    	maxMessagesPerPoll  the maximum number of messages per poll                    100                                       int
+    	secretKey           the secretKey for AWS                                      x3NKKW0LthjQK75jymP+InhZp9aP4hwqvMeaxgny  java.lang.String
+    	localDirectory      the localDirectory                                         /tmp/nec                                  java.lang.String
+    	outputType          how this module should emit messages it produces           <none>                                    org.springframework.util.MimeType
 
 Now create and deploy a stream:
 
-	xd:>
-stream create S3Test --definition "s3Source --accessKey=[accessKey] --secretKey=[secretKey] --bucket=[bucket] --remoteDirectory=[remoteDirectory] --localDirectory=[localDirectory] | log" --deploy
+	xd:>stream create S3Test --definition "s3Source --accessKey=[accessKey] --secretKey=[secretKey] --bucket=[bucket] --remoteDirectory=[remoteDirectory] --localDirectory=[localDirectory] | log" --deploy
 
 
 You should see the stream output in the Spring XD log 
