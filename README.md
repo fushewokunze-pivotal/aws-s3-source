@@ -9,6 +9,16 @@ In order to install the module and run it in your Spring XD installation, you wi
 
 * Spring XD version 1.1.x ([Instructions](http://docs.spring.io/spring-xd/docs/current/reference/html/#getting-started))
 
+Ensure you have the following AWS credentials on hand:
+- *accessKey*           the accessKey for AWS                                    
+- *bucket*              the bucket for S3                                         
+- *remoteDirectory*     the remoteDirectory for S3                                                                     - *secretKey*           the secretKey for AWS                                      
+- *localDirectory*      the localDirectory where files will be downloaded to
+
+Update the `ConfigurationTest-context.xml` file with credentials above to run the unit tests.
+Create the *localDirectory* on your machine 
+
+
 ## Code Tour
 
 This implements a source module which downloads files from a s3 bucket from given AWS API credentials using an existing Spring Integration S3 inbound channel adapter. The example demonstrates the use of the `spring-xd-module-parent` pom and an integration test to test the module registered and deployed in an embedded Spring XD single node container.
