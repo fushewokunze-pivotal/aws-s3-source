@@ -27,7 +27,7 @@ The project's [build.gradle][] applies the `spring-xd-module` plugin, providing 
 
 ## Using the Custom Module
 
-The uber-jar will be in `[project-build-dir]/s3-source-feed-1.0.0.BUILD-SNAPSHOT.jar`. To install and register the module to your Spring XD distribution, use the `module upload` Spring XD shell command. Start Spring XD and the shell:
+The uber-jar will be in `[project-build-dir]/s3-source-1.0.0.BUILD-SNAPSHOT.jar`. To install and register the module to your Spring XD distribution, use the `module upload` Spring XD shell command. Start Spring XD and the shell:
 
 
 	_____                           __   _______
@@ -41,7 +41,7 @@ The uber-jar will be in `[project-build-dir]/s3-source-feed-1.0.0.BUILD-SNAPSHOT
 	eXtreme Data
 	1.1.0.BUILD-SNAPSHOT | Admin Server Target: http://localhost:9393
 	Welcome to the Spring XD shell. For assistance hit TAB or type "help".
-	xd:>module upload --file [path-to]/s3-source-feed-1.0.0.BUILD-SNAPSHOT.jar --name s3Source --type source
+	xd:>module upload --file [path-to]/s3-source-1.0.0.BUILD-SNAPSHOT.jar --name s3Source --type source
 	Successfully uploaded module 'source:s3Source'
 	xd:>
 
@@ -50,7 +50,7 @@ You can also get information about the available module options:
 
 	xd:>module info source:s3Source
 
-	Information about source module 'feed':
+	Information about source module 's3Source':
 
   	Option Name         Description                                                Default                                   Type
   	------------------  ---------------------------------------------------------  -------  ---------
