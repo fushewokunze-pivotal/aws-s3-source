@@ -55,11 +55,11 @@ You can also get information about the available module options:
   	Option Name         Description                                                Default                                   Type
   	------------------  ---------------------------------------------------------  -------  ---------
     	fixedRate           the fixed rate polling interval specified in milliseconds  5000                                      int
-    	accessKey           the accessKey for AWS                                      AKIAJ7XQCW7P5FHBGYAQ                      java.lang.String
+    	accessKey           the accessKey for AWS                                      RANDOMSTRING                      java.lang.String
     	bucket              the bucket for S3                                          testboom                                  java.lang.String
     	remoteDirectory     the remoteDirectory for S3                                 /                                         java.lang.String
     	maxMessagesPerPoll  the maximum number of messages per poll                    100                                       int
-    	secretKey           the secretKey for AWS                                      x3NKKW0LthjQK75jymP+InhZp9aP4hwqvMeaxgny  java.lang.String
+    	secretKey           the secretKey for AWS                                      RANDOMString  java.lang.String
     	localDirectory      the localDirectory                                         /tmp/nec                                  java.lang.String
     	outputType          how this module should emit messages it produces           <none>                                    org.springframework.util.MimeType
 
