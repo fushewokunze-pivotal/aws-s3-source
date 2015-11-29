@@ -1,7 +1,7 @@
-AWS S3 Feed Source Module
+AWS S3 Source Module
 =============================
 
-This is an example of a custom source module using the Spring Integration feed inbound channel adapter to download files from a S3 bucket. This is built and packaged for installation in a Spring XD runtime environment using maven. The project includes sample unit and integration tests, including the ability to test the module in an embedded single node container. It also illustrates how to define module options using simple property descriptors.
+This is an example of a custom source module using the Spring Integration S3 inbound channel adapter to download files from a S3 bucket. This is built and packaged for installation in a Spring XD runtime environment using maven. The project includes sample unit and integration tests, including the ability to test the module in an embedded single node container. It also illustrates how to define module options using simple property descriptors.
 
 ## Requirements
 
@@ -11,7 +11,7 @@ In order to install the module and run it in your Spring XD installation, you wi
 
 ## Code Tour
 
-This implements a source module which files from a s3 bucket from given AWS API credentials using an existing Spring Integration inbound channel adapter. The example demonstrates the use of the `spring-xd-module-parent` pom and an integration test to test the module registered and deployed in an embedded Spring XD single node container.
+This implements a source module which downloads files from a s3 bucket from given AWS API credentials using an existing Spring Integration S3 inbound channel adapter. The example demonstrates the use of the `spring-xd-module-parent` pom and an integration test to test the module registered and deployed in an embedded Spring XD single node container.
 
 ## Building with Maven
 
