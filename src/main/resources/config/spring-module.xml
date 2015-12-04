@@ -36,7 +36,6 @@
 		temporary-suffix=".transferring"
 		bucket="${bucket}" 
 		channel="output" 
-		delete-source-files="false"
 		accept-sub-folders="true"
 		remote-directory="${remoteDirectory}">
 		
