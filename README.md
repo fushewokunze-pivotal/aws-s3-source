@@ -1,4 +1,4 @@
-AWS S3 Source Module
+SpringXD AWS S3 Source Module
 =============================
 
 This is an example of a custom source module using the Spring Integration S3 inbound channel adapter to download files from a S3 bucket. This is built and packaged for installation in a Spring XD runtime environment using maven. The project includes sample unit and integration tests, including the ability to test the module in an embedded single node container. It also illustrates how to define module options using simple property descriptors.
@@ -14,6 +14,7 @@ Ensure you have the following AWS credentials on hand:
 - *bucket*              the bucket for S3                                         
 - *remoteDirectory*     the remoteDirectory for S3                                                                     - *secretKey*           the secretKey for AWS                                      
 - *localDirectory*      the localDirectory where files will be downloaded to
+- *fixedRate*      the fixed rate polling interval specified in milliseconds
 
 Update the `ConfigurationTest-context.xml` file with credentials above to run the unit tests.
 Create the *localDirectory* on your machine 
