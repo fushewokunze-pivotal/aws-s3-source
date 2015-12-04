@@ -40,6 +40,6 @@
 		
 	</int-aws:s3-inbound-channel-adapter>	
 
-	<int:poller default="true" fixed-rate="5000"/>
+	<int:poller default="true" fixed-rate="${fixedRate}"/>
 
 </beans>
