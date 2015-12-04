@@ -36,7 +36,6 @@
 		temporary-suffix=".transferring"
 		bucket="${bucket}" 
 		channel="output" 
-		accept-sub-folders="true"
 		remote-directory="${remoteDirectory}">
 		
 	</int-aws:s3-inbound-channel-adapter>	
