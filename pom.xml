@@ -29,6 +29,11 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-aws</artifactId>
+		</dependency>
+
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-messaging</artifactId>
 			<version>4.2.2.RELEASE</version>
@@ -52,7 +57,20 @@
 		</dependency>
 
 	</dependencies>
-	
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-aws</artifactId>
+				<version>1.0.3.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
 	<repositories>
 		<repository>
 			<id>jcenter</id>
@@ -86,5 +104,5 @@
 			</releases>
 		</repository>
 	</repositories>
-	
+
 </project>
